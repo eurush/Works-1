@@ -1,4 +1,4 @@
-int cell_size=50;
+int cell_size=25;
 int grid_width,grid_height;
 grid g1;
 void setup(){

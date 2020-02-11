@@ -14,19 +14,19 @@ class cell{
   }
   void display(){
     if(left==true){
-      strokeWeight(2);
+      strokeWeight(3);
       line(xpos,ypos,xpos,ypos+size);
     }
     if(right==true){
-      strokeWeight(2);
+      strokeWeight(3);
       line(xpos+size,ypos,xpos+size,ypos+size);
     }
     if(top==true){
-      strokeWeight(2);
+      strokeWeight(3);
       line(xpos,ypos,xpos+size,ypos);
     }
     if(bottom==true){
-      strokeWeight(2);
+      strokeWeight(3);
       line(xpos,ypos+size,xpos+size,ypos+size);
     }
     //strokeWeight(1);
@@ -34,8 +34,8 @@ class cell{
     //if(visited==false){
     //  fill(200);
     //}else{
-    //  fill(100);
+    //  fill(255);
     //}
-    //rect(xpos+2,ypos+2,size-2,size-2);
+    //rect(xpos,ypos,size,size);
   }
 };

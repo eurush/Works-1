@@ -117,9 +117,9 @@ class grid{
     if(blocks.get(give_loc(whichx,whichy)).visited==true){
       return;
     }
-    if((whichx==grid_width-1 && whichy==grid_height-1)){
-      return;
-    }
+    //if(whichx==grid_width-1 && whichy==grid_height-1){
+    //  return;
+    //}
     blocks.get(give_loc(whichx,whichy)).visited=true;
     while(true){
       int delx=((int(random(0,100)))%4);
@@ -160,5 +160,38 @@ class grid{
         }
       }
     }
+    //int[] alongx={0,1,-1};
+    //int[] alongy={1,-1};
+    //for(int x:alongx){
+    //  if(x==0){
+    //    for(int y:alongy){
+    //      if(whichx+x>=0 && whichx+x<grid_width && whichy+y>=0 && whichy+y<grid_height){
+    //        if(blocks.get(give_loc(whichx+x,whichy+y)).visited==false){
+    //           if(y==1){
+    //             blocks.get(give_loc(whichx,whichy)).bottom=false;
+    //             blocks.get(give_loc(whichx+x,whichy+y)).top=false;
+    //           }else{
+    //             blocks.get(give_loc(whichx,whichy)).top=false;
+    //             blocks.get(give_loc(whichx+x,whichy+y)).bottom=false;
+    //           }
+    //          traverse_maze(whichx+x,whichy+y);
+    //        }
+    //      }
+    //    }
+    //  }else{
+    //      if(whichx+x>=0 && whichx+x<grid_width){
+    //        if(blocks.get(give_loc(whichx+x,whichy)).visited==false){
+    //          if(x==1){
+    //             blocks.get(give_loc(whichx,whichy)).right=false;
+    //             blocks.get(give_loc(whichx+x,whichy)).left=false;
+    //         }else{
+    //             blocks.get(give_loc(whichx,whichy)).left=false;
+    //             blocks.get(give_loc(whichx+x,whichy)).right=false;
+    //         }
+    //          traverse_maze(whichx+x,whichy);
+    //        }
+    //      }
+    //  }
+    //}
   }
 };
