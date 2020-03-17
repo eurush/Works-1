@@ -1,5 +1,5 @@
 @echo off
-echo dddd
+
 if %3 equ 1 (
 	goto :main1
 )else (
