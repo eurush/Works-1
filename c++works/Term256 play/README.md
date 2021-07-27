@@ -1,6 +1,6 @@
 What it can do ::
 
-        draw SHAPES: Ellipse, Rectange and Line
+             SHAPES: Ellipse, Rectange and Line
              TEXT  : Background & Foreground text Color, Blink animation on characters
          ANIMATION : Rotation of SHAPES, about any point and any provided angle 
 
