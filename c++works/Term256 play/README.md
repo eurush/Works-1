@@ -1,9 +1,8 @@
-What it have now ::
+What it can do ::
 
-        SHAPES: Ellipse, Rectange and Line
-        TEXT  : Background text Color, Blinking characters
-        Animation : movements via frame by frame drawing
-        ~ Rotation of shapes about any angle and about any point
+        draw SHAPES: Ellipse, Rectange and Line
+             TEXT  : Background & Foreground text Color, Blink animation on characters
+         ANIMATION : Rotation of SHAPES, about any point and any provided angle 
 
 1) Solving Maze using c++ visualization
 
