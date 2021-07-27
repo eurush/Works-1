@@ -39,16 +39,21 @@
           What mainly happens in Main Sketch:
           setup function intializes everything, draw function displays and updates the POPULATION over and over again (infinite loop so to speak),
           3 mouse interactive functions to draw obstacle in real-time, 1 keyboard interactive function to reset the simulation
-        
-   
-   
-   
-
+  
+  
+  VID1 and VID2 shows ability to find paths, 
+  
 
 https://user-images.githubusercontent.com/44106871/127114747-e01cab3f-f87d-4e88-b8ef-c2295217bd0f.mp4
 
 
 
 https://user-images.githubusercontent.com/44106871/127114766-1b998127-2ff7-41dc-9f5d-0c227f4c3249.mp4
+
+
+VID3 shows the ability to find new path if previous path is blocked
+
+
+https://user-images.githubusercontent.com/44106871/127122450-ecff01b7-fc35-45c1-bce0-89051c8261b6.mp4
 
 
