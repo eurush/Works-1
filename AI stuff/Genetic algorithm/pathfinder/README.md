@@ -1,5 +1,5 @@
 1) Each element have their own Force-field, which guides their velocity and velocity over frame-time decides position.
-    {   
+       
           Important variables inside ELEMENT:
           mutationrate, fitness (real-time), force-field array, maxhealth, current health, position and velocity, (remaining variables are mainly for debugging
           and displaying), healthloss_decrement, boolean values -> reached, crashed and died, maxvelocity and maxacceleration (to not break the simulation by 
@@ -8,7 +8,7 @@
           What ELEMENT can do:
           can take 2 parents as parameter to perform crossover and mutation, check for edges and obstacles, reposition (to reset to starting position)
           , Applyforce function to move element, (rest are displaying functions)
-    }
+    
     
 2) Population, is where fitness is calculated, new-generation is born
    {
