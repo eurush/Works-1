@@ -14,11 +14,13 @@
 - Simulation will run automatically when you will click one of the Input boxes with Updated parameters ( LOL there are only 2 parameters ;) )
 
 
+
 ## Result should look like this
 
 https://user-images.githubusercontent.com/44106871/131207523-14e635e7-6a24-4e4d-b0da-e5125db167f3.mp4
 
 
+Bad frameRate (ಥ⌣ಥ) 
 
      
      
