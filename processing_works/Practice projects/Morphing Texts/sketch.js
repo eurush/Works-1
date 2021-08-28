@@ -1,22 +1,21 @@
 
-
 // Works with .ttf and .otf Font Formats
 var otf1;
 function preload(){
-    otf1 = loadFont('ttfpart1.ttf');
+    otf1 = loadFont('./fonts/ttfpart3.ttf');
 }
 // After preloading
 
 // Fix parameters for both Target and Initial Strings
 var sizeslider;
 var sampleslider;
-var speed=1.5;
+var speed=2.7;
 var newpos = [];
-var threshold = 1;
+var threshold = 1.4;
 var whichone=true;
-var offx = 5,offy=0;
-var colorval = 0;
+var offx = 20,offy=30;
 
+var strokeW1 = 2;
 
 // DOM elements for Strings
 var inputbox1,inputbox2,name1,name2;
@@ -25,7 +24,8 @@ var secondpoints;;
 var pinkcolor;
 var scl=20;
 function setup(){
-    createCanvas(800,600);
+    createCanvas(1000,600);
+    background(100);
     sizeslider = createSlider(0,1000,250);
     sizeslider.position(0,height+20);
     sampleslider = createSlider(0,50,40);
@@ -63,8 +63,6 @@ function draw(){
     if(whichone==true)showfirst();
     else showsecond();
     updatepoints();
-    colorval++;
-    colorval%=256;
 
 }
 function updatepoints(){
@@ -89,46 +87,59 @@ function getnewpos(){
         var pointa = createVector(firstpoints[i].x,firstpoints[i].y);
         var idx = int(map(i,0,firstpoints.length-1,0,secondpoints.length-1));
         var pointb = createVector(secondpoints[idx].x,secondpoints[idx].y).sub(pointa);
-        pointb.setMag(speed);
+        pointb.setMag(random(1,speed));
         newpos.push(pointb);
     }
 }
 function showfirst(){
+    var colorval = 0;
+    var frwd = true;
     push();
-    // fill(0,255,0);
+    colorMode(HSB);
     noFill();
     beginShape();
     // noStroke();
     for(var posi of firstpoints){
         push();
         stroke(colorval,255,255,100);
-        strokeWeight(2);
+        strokeWeight(strokeW1);
         point(posi.x,posi.y);
         // vertex(posi.x,posi.y);
         pop();
+        if(frwd==true)colorval++;
+        else colorval--;
+        if(colorval==256)frwd=false;
+        if(colorval==0)frwd = true;
     }
     endShape();
     pop();
 }
 function showsecond(){
+    var colorval=0;
+    var frwd=true;
     push();
-    // fill(0,255,0);
+    colorMode(HSB);
     noFill();
     noStroke();
     beginShape();
     for(var posi of secondpoints){
         push();
         stroke(colorval,255,255,100);
-        strokeWeight(2);
+        strokeWeight(strokeW1);
         // vertex(posi.x,posi.y);
         point(posi.x,posi.y);
         pop();
+         if(frwd==true)colorval++;
+        else colorval--;
+        if(colorval==256)frwd=false;
+        if(colorval==0)frwd = true;
     }
     endShape();
     pop();
 
 }
 function dothis(){
+    // background(100);
     whichone = true;
     firstpoints = otf1.textToPoints(inputbox1.value(),offx,sizeslider.value()+offy,sizeslider.value(),{
         sampleFactor : sampleslider.value()/50
@@ -139,18 +150,3 @@ function dothis(){
     newpos = [];
     getnewpos();
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
