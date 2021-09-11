@@ -33,5 +33,16 @@
    - `.image_to_png();` which gives final image
 6. Final executable produced using `g++ cppfile.cpp -o  cppfile ./plots/pbPlots.cpp ./plots/supportLib.cpp -lm` and 'lm' is for including 'math' library
 
-   
+
+## Final Result
+
+Writing Text on Canvas using `DrawText(canvas->Image_ptr, position in x, position in y, Text ptr , Color ptr)` function of `void` return type
+
+Text of `vector<wchar_t> *text`
+
+Color with Red, Blue, Green and Alpha of `RGBA *color` type
+
+
+![image1](https://user-images.githubusercontent.com/44106871/132960273-8110015c-f4ff-4f5c-8a17-1462879b9a7b.png)
+
      
