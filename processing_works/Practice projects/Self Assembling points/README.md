@@ -4,4 +4,4 @@
 
 Ofcourse **🌈Rainbow color** 😊
 
-[p5 sketch](https://editor.p5js.org/Eurus/sketches/JD5wahv7c)
+click here to run the [p5 sketch](https://editor.p5js.org/Eurus/sketches/JD5wahv7c)
