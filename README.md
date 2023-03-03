@@ -1,8 +1,8 @@
 ### C++ Works
 Projects made entirely using C++
-- Comparision of Sorting Algoritms : Image Processing using C++, use case is shown by implementing benchmarking plots for comparing different sorting algorithms
-- Term256 : Graphics Library using C++, animations will be shown in Terminal.
-- FileIO : Fun project trying using FileIO to display big ASCII charcters.
+- Comparision of Sorting Algoritms : Image Processing using C++, use case is shown by implementing benchmarking plots for different sorting algorithms
+- Term256 : Graphics Library using C++, animations are shown in Terminal.
+- FileIO : Fun project trying to display enlarged ASCII charcters using FileIO concepts.
 
 Details are in individual READMEs.
 
@@ -20,7 +20,7 @@ Simulation based projects, there are screenrecoreded videos of individual simula
 3. ASCII art : Drawing images using only ASCII characters
 
 ### CP template
-Consist of handy Competitive Programming templates that are frequently used, more detailed description is in README file.
+Consist of handy Competitive Programming templates that are frequently used by me, more detailed description is in README file.
 
 #### Python-works, MATLAB-works, BAT and AI stuff
 These folders consist of either fun stuff or very basic applications like 
