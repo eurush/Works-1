@@ -28,3 +28,54 @@ void fft(vector<complex<double>> &a, bool invert=false) { // everything is compl
   }
   if (invert) for (int i = 0; i < n; i++) a[i] /= n;
 }
+
+// ---------------------------------------- Old code -------------------------------------------------
+template<class T>
+vt<CN<double>> fft(const vt<T>&a,int n,const CN<double>& w){
+    if(n==1)return vt<CN<double>>{CN<double>(a[0])};
+    vt<T> aeven,aodd;
+    FOR(i,0,n){
+        if(i&1)aodd.pb(a[i]);
+        else aeven.pb(a[i]);
+    }
+    vt<CN<double>> k1 = fft<T>(aeven,n/2,w*w);
+    vt<CN<double>> k2 = fft<T>(aodd,n/2,w*w);
+    vt<CN<double>> res(n);
+    FOR(i,0,n){
+        res[i] = k1[i%(n/2)] + pow(w,i)*k2[i%(n/2)];
+    }
+    return res;
+}
+template<class T>
+vt<CN<double>> fft(vt<T>&a){
+    int nss = 1;
+    while(nss<SZ(a))nss*=2;
+    a.resize(2*nss);
+    CN<double> w = exp((2.0*pi*1i)/(1.0*SZ(a)));
+    return fft(a,SZ(a),w);
+}
+vt<CN<double>> ifft(const vt<CN<double>> &a,int n,const CN<double>& w){
+    if(n==1)return vt<CN<double>>{CN<double>(a[0])};
+    vt<CN<double>> aeven,aodd;
+    FOR(i,0,n){
+        if(i&1)aodd.pb(a[i]);
+        else aeven.pb(a[i]);
+    }
+    vt<CN<double>> k1 = ifft(aeven,n/2,w*w);
+    vt<CN<double>> k2 = ifft(aodd,n/2,w*w);
+    vt<CN<double>> res(n);
+    FOR(i,0,n){
+        res[i] = (k1[i%(n/2)] + pow(w,i)*k2[i%(n/2)]);
+    }
+    return res;
+}
+template<class T>
+vt<T> ifft(vt<CN<double>>&a){
+    int nss = 1;
+    while(nss<SZ(a))nss*=2;
+    a.resize(nss);
+    CN<double> w = exp((-2.0*pi*1i)/(1.0*SZ(a)));
+    vt<CN<double>> iffthere = ifft(a,SZ(a),w);
+    vt<T> ans;    for(auto x : iffthere)ans.pb(x.real()/(1.0*SZ(a)));
+    return ans;
+}
