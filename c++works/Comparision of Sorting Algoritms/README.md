@@ -1,7 +1,35 @@
-## COMPARING SORTING ALGORITHMS 
+## How Ploting works 
+### Underlying structure of Arributes and Methods show as dependency graph.
+The classic data types, as we know them from early programming languages are used to create new abstract-data-types that used as our Image attributes and as well as for Ploting Attributes. 
+
+Every preceeding image in this README file supports the succeding arributes and methods till we get the final PNGImage. And its literally the chronology in which image finally develops.
+#### Image Attributes
+---
+
+![parameters](https://user-images.githubusercontent.com/44106871/224314889-c659b9ee-3d8b-4357-afc9-b2e657f87b52.png)
+#### Plot Attributes
+---
+![plotingparameters](https://user-images.githubusercontent.com/44106871/224314877-548fa4e3-0bca-4f76-a7d9-95db04bce1e8.png)
+
+#### String Manipulation Methods
+---
+String manipulaiton methods plays very important role in the entire process, whether checking for presence of substring or converting decimal doubles into `wchar_t` for printing output on final plot.
+![stringgame01](https://user-images.githubusercontent.com/44106871/224338853-bc459e56-2a2b-414f-a586-b94c120c427f.svg)
+
+#### Setting up Plot Methods for Scatter and Bar Plots
+---
+![ScatterandBarPlotingwithTesting](https://user-images.githubusercontent.com/44106871/224403753-0ed6d779-cb42-49d5-ab6d-3551501296e1.svg)
+
+#### PNG image
+
+![ConvertoPNG](https://user-images.githubusercontent.com/44106871/224403834-021cf155-d18e-400b-b8ef-18a8dfc853aa.svg)
+
+
+
+### Comparing Sorting Algorithms 
 > **In-built sort** vs **Selection** vs **Merge** vs **Quick** vs **Heap** vs **Radix** vs **Shell**
 
-### What has been used in implementing Comparisions
+#### What has been used in implementing Comparisions
 
 1. Used [pbPlots](https://github.com/InductiveComputerScience/pbPlots/tree/v0.1.8.0) and Wrap its functionalities in **`struct IMAGE;`**
    - It have 3 parts: 
